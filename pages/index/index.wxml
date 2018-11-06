@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<scroll-view scroll-x>
+  <view class='title-list'>
+    <view class="title-item" wx:for="{{newsType2}}" bindtap='bindNews' data-index='{{index}}'>{{item}}</view>
+  </view>
+</scroll-view>
+
+<view class='news-list'>
+  <view class='news-card' wx:for="{{newsList}}" bindtap='getDetail' data-id='{{item.id}}'>
+    <view class='news-info'>
+      <view class='news-title'>{{item.title}}</view>
+      <view class='news-time'>{{item.date}}</view>
+    </view>
+    <image wx:if='{{item.firstImage}}' class='news-image' src='{{item.firstImage}}'></image>
+    <image wx:else class='news-image' src='/images/new.jpg'></image>
+  </view>
+</view>
