@@ -44,6 +44,18 @@
   color: rgba(29, 29, 38, 0.9);
 }
 
+.news-info-line {
+  display: flex;
+}
+
+.news-source {
+  flex: 1;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  color: rgba(29, 29, 38, 0.9);
+}
+
 .news-time {
   margin-top: 20rpx;
   font-size: 26rpx;

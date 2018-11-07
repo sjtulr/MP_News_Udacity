@@ -2,10 +2,11 @@
 <view class='new-card'>
   <view class='new-title'>{{newDetail.title}}</view>
   <view class='new-info'>
-    <view class='new-date'>{{newDetail.date}}</view>
-    <view class='new-reader'>阅读数： {{newDetail.readCount}}</view>
+    <view wx:if='{{newDetail.source}}' class='new-source'>{{newDetail.source}} {{newDetail.date}}</view>
+    <view wx:else class='new-source'>匿名   {{newDetail.date}}</view>
+    <view class='new-reader'>阅读数：{{newDetail.readCount}}</view>
   </view>
-  <view class='new-content' wx:for='{{newDetail.content}}'>
+  <view class='new-content' wx:key="id" wx:for='{{newDetail.content}}'>
     <view wx:if="{{item.type === 'image'}}">
       <image class='content-image' src='{{item.src}}'></image>
     </view>

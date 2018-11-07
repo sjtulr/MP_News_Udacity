@@ -17,10 +17,11 @@
 .new-info {
   display: flex;
   margin: 10rpx 0;
-  font-size: 30rpx;
+  font-size: 28rpx;
+  color: rgba(0, 0, 0, 0.6)
 }
 
-.new-date {
+.new-source {
   flex: 1;
 }
 
